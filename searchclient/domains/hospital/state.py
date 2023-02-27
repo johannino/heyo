@@ -190,17 +190,7 @@ class HospitalState:
         return applicable_joint_actions
 
 
-    def is_adjacent_to_wall(self, position: tuple[int, int]) -> bool:
-        """
-        Returns true if there is a wall adjacent to the position.
-        """
-        row, col = position
-        for d_row, d_col in directions.values():
-            if self.level.wall_at((row + d_row, col + d_col)):
-                return True
-        return False
 
-        
     def color_filter(self, color: str):
         """
         Returns a copy of the current state where all entities, of another color than the color passed as an argument,
